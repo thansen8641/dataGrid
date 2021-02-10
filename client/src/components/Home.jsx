@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
 
-const Home = () => {
+const Home = (props) => {
+  console.log(props)
   return (
     <div>
       <div className='homeContainer'>
@@ -15,4 +17,15 @@ const Home = () => {
   )
 }
 
-export default Home;
+// for retrieving props from store
+
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts
+  }
+}
+
+export default connect(mapStateToProps)(Home);
+
+
+// export default Home;

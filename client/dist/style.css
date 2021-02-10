@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  background: #141618;
+}
+
+h3 {
+  font-size: 40;
+}
+
+h5 {
+  font-size: 35;
+}
+
+h6 {
+  font-size: 25;
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.homeText {
+  font-family: 'Teko', sans-serif;
+  color: #bc9d57;
+  /* color: #ddcd9f; */
+  text-align: center;
+  border-bottom: #dddddd;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin: 15% 15% 5% 15%;
+  border-bottom: 1px solid #bc9d57;
+  border-top: 1px solid #bc9d57;
+  padding: 3% 0% 3% 0;
+  width: 50%;
+}
+
+
+

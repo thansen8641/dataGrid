@@ -23,6 +23,11 @@ h6 {
   font-size: 25;
 }
 
+.test {
+  font-size: large;
+  color: #bc9d57;
+}
+
 .logo {
   width: 100px;
   height: 100px;
@@ -39,14 +44,15 @@ h6 {
   width: 100%;
   font-size: 25;
   font-family: 'Teko', sans-serif;
-  color: #bc9d57;
   letter-spacing: 0.1rem;
   padding-left: 50%;
-  padding-top: .5%;
+  padding-top: 3%;
 }
 
 .navLink {
   padding-right: 15%;
+  text-decoration: none;
+  color: #bc9d57;
 }
 
 .homeContainer {

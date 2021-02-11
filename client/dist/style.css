@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
- background-image: url("https://i.ibb.co/sw1TDZJ/Image-2.png");
  background-repeat: no-repeat;
+ background-color: #141618;
  background-size: cover;
 }
 
@@ -40,23 +40,32 @@ h6 {
 
 .navBar {
   display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+ /* border-bottom: .1px solid #bc9d57;
+   border-width: .01ch; */
+   background-color: #141618;
 }
 
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   width: 100%;
   font-size: 25;
   font-family: 'Teko', sans-serif;
   letter-spacing: 0.1rem;
-  padding-left: 50%;
-  padding-top: 3%;
+  padding-bottom: 2%;
 }
 
+
 .navLink {
-  padding-right: 15%;
+  justify-self: flex-end;
+  align-self: flex-end;
+  padding-right: 40px;
   text-decoration: none;
   color: #bc9d57;
+  align-content: space-between;
 }
 
 .homeContainer {
@@ -64,6 +73,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 5%;
 }
 
 
@@ -87,6 +97,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 5%;
 }
 
 .containerText {
@@ -100,6 +111,66 @@ h6 {
   border-top: 1px solid #bc9d57;
   padding: 3% 0% 3% 0;
   width: 50%;
+}
+
+.projectsContainer {
+  height: 800px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  top: 32%;
+}
+
+.projectsTitle {
+  font-family: 'Teko', sans-serif;
+    color: #bc9d57;
+    align-self: center;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    border-top: 1px solid #bc9d57;
+    width: 50%;
+    font-size: 22;
+    padding-bottom: 5%;
+}
+
+.project1 {
+  display: flex;
+}
+
+.Inkorporate {
+  display: flex;
+  padding-left: 5%;
+  width: 28%;
+}
+
+.vertLine {
+  background: linear-gradient(#bc9d57, #bc9d57) no-repeat center/1px 75%;
+  width: 33%;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+.infoTitle{
+  color: #bc9d57;
+  letter-spacing: 0.2rem;
+  font-family: 'Teko', sans-serif;
+  margin-top: 0;
+  margin-bottom: 1%;
+}
+
+.infoDesc{
+    color: #bc9d57;
+  letter-spacing: 0.2rem;
+  font-family: 'Teko', sans-serif;
+  margin-bottom: .5%;
+  text-transform: uppercase;
 }
 
 

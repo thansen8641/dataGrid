@@ -3,9 +3,8 @@ import Home from './Home.jsx';
 import Contact from './Contact.jsx';
 import About from './About.jsx';
 import Projects from './Projects.jsx';
-import Resume from './Resume.jsx';
 import NavBar from './NavBar.jsx';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import { connect } from 'react-redux';
 
 import {
   BrowserRouter as Router,
@@ -16,29 +15,43 @@ import {
 
 
 
-const App = () => {
+const App = (props) => {
+  console.log('app', props.darkMode)
   return (
     <Router>
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Home darkMode={props.darkMode} />
         </Route>
 
 
         <Route path="/About">
-          <About />
+          <About darkMode={props.darkMode} />
         </Route>
         <Route path="/Projects">
-          <Projects />
+          <Projects darkMode={props.darkMode}/>
         </Route>
-        {/* <a className='linkToSite' target="_blank" href="https://docs.google.com/document/d/1DO7iY9WajkLMrIFhEFqkOOu9bovlpzX2cvI01N1gzNU/edit?usp=sharing">RESUME</a> */}
         <Route path="/Contact">
-          <Contact />
+          <Contact darkMode={props.darkMode} />
         </Route>
       </Switch>
     </Router >
   )
 }
 
-export default App
+const mapStateToProps = (state) => {
+  return {
+    darkMode: state.darkMode
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    changeMode: () => { dispatch({type: 'changeMode'})}
+  }
+}
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

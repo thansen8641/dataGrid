@@ -5,7 +5,8 @@ import YouTube from 'react-youtube';
 
 
 
-const Projects = () => {
+const Projects = (props) => {
+  console.log('projects', props)
 
   const onReady = (event) => {
     event.target.stopVideo()
@@ -20,7 +21,7 @@ const Projects = () => {
   return (
     <div className='pageContainer'>
       <div className='pageTitle'>
-        <h1> PROJECTS </h1>
+        <h1> HERE ARE A FEW PROJECTS I WORKED ON </h1>
       </div>
       <div className='project'>
         <div className='projectVideo'>
@@ -49,7 +50,7 @@ const Projects = () => {
       <div className='project'>
         <div className='infoContainer'>
           <h3 className='infoTitle'>
-            Bootlocker
+            BOOTLOCKER
         </h3>
           <p className='infoDesc'>
             - Project Description: Created a replica of a product page for the popular online retail store, Foot Locker.
@@ -60,7 +61,7 @@ const Projects = () => {
           <p className='infoDesc'>
             - Utilized a service oriented architecture to split up module responsibility among a team and deployed individual services through a proxy server and hosted with an AWS EC2 instance.
         </p>
-          <a className='linkToSite' target="_blank" href="https://bootlocker.herokuapp.com/">- Click here to view project website</a>
+         <a className='linkToSite' target="_blank" href="https://bootlocker.herokuapp.com/">- Click here to view project website</a>
 
         </div>
         <div className='projectVideo'>
@@ -75,7 +76,7 @@ const Projects = () => {
         </div>
         <div className='infoContainer'>
           <h3 className='infoTitle'>
-            Bullseye
+            BULLSEYE
         </h3>
           <p className='infoDesc'>
             - Project Description: Redesigned an inherited application’s back end processes to accommodate for a robust database sample size and optimize run time speed while maintaining integrity of the application.
@@ -88,6 +89,9 @@ const Projects = () => {
         </p>
         <a className='linkToSite' target="_blank" href="https://docs.google.com/document/d/1DO7iY9WajkLMrIFhEFqkOOu9bovlpzX2cvI01N1gzNU/edit?usp=sharing">- Click here to view project notes</a>
         </div>
+      </div>
+      <div className='spacer'>
+
       </div>
     </div>
   )

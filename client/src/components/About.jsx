@@ -1,9 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 
-const About = () => {
+const About = (props) => {
+  console.log('about', props)
   return(
-    <div className='aboutContainer'>
+    <div className='container'>
       <div className='containerText'>
       <h1>
         Hey, I'm Tim

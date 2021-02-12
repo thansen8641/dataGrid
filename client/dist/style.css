@@ -2,9 +2,17 @@
 /* ******** DARK MODE ********** */
 
 
-body {
-  margin: 0;
-  padding: 0;
+/* body {
+margin: 0;
+padding: 0;
+ background-repeat: no-repeat;
+ background-color: #141618;
+ background-size: cover;
+} */
+
+.darkMode {
+margin: 0;
+padding: 0;
  background-repeat: no-repeat;
  background-color: #141618;
  background-size: cover;
@@ -13,10 +21,6 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-html {
-  background: #141618;
 }
 
 h3 {
@@ -31,18 +35,13 @@ h6 {
   font-size: 25;
 }
 
-.test {
-  font-size: large;
-  color: #bc9d57;
-}
-
 .logo {
   width: 100px;
   height: 100px;
   padding: 5% 0% 0% 20%;
 }
 
-.navBar {
+.darkNavBar {
   display: flex;
   position: fixed;
   width: 100%;
@@ -251,3 +250,22 @@ h6 {
 
 
 /* ******** LIGHT MODE ********** */
+
+
+.lightMode {
+  margin: 0;
+  padding: 0;
+   background-repeat: no-repeat;
+   background-color: #e1e2e4;
+   background-size: cover;
+  }
+
+  .lightNavBar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+   /* border-bottom: .1px solid #bc9d57;
+     border-width: .01ch; */
+     background-color: #e1e2e4;
+  }

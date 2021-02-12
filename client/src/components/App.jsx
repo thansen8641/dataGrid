@@ -19,7 +19,7 @@ const App = (props) => {
   console.log('app', props.darkMode)
   return (
     <Router>
-      <NavBar />
+      <NavBar darkMode={props.darkMode} />
       <Switch>
         <Route exact path="/">
           <Home darkMode={props.darkMode} />

@@ -131,30 +131,35 @@ h6 {
     text-align: center;
     letter-spacing: 0.2rem;
     border-top: 1px solid #bc9d57;
+    border-bottom: 1px solid #bc9d57;
     width: 50%;
     font-size: 22;
-    padding-bottom: 5%;
+    margin-bottom: 4%;
+    /* padding-bottom: 5%; */
 }
 
-.project1 {
+.project {
   display: flex;
+  margin: 4% 0% 4% 0;
 }
 
-.Inkorporate {
+.projectVideo {
   display: flex;
-  padding-left: 5%;
-  width: 28%;
+  padding-left: 3%;
+  padding-right: 2%;
+  width: 45%;
 }
 
-.vertLine {
+/* .vertLine {
   background: linear-gradient(#bc9d57, #bc9d57) no-repeat center/1px 75%;
   width: 33%;
-}
+} */
 
 .infoContainer {
   display: flex;
   flex-direction: column;
-  width: 33%;
+  padding-left: 3%;
+  width: 47%;
 }
 
 .infoTitle{
@@ -166,12 +171,23 @@ h6 {
 }
 
 .infoDesc{
-    color: #bc9d57;
+  color: #bc9d57;
   letter-spacing: 0.2rem;
   font-family: 'Teko', sans-serif;
   margin-bottom: .5%;
   text-transform: uppercase;
 }
+
+.linkToSite {
+  margin-block-start: 1em;
+  text-decoration: none;
+  color: #bc9d57;
+  letter-spacing: 0.2rem;
+  font-family: 'Teko', sans-serif;
+  margin-bottom: .5%;
+  text-transform: uppercase;
+}
+
 
 
 

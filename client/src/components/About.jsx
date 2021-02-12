@@ -6,7 +6,7 @@ const About = (props) => {
   console.log('about', props)
   return(
     <div className='container'>
-      <div className='containerText'>
+      <div className={props.darkMode ? 'darkModeContainerText' : 'lightModeContainerText'}>
       <h1>
         Hey, I'm Tim
       </h1>

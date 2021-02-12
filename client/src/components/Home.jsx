@@ -5,7 +5,6 @@ import Switch from "react-switch";
 
 const Home = (props) => {
   console.log('home', props)
-  const [ modeText, setModeText ] = useState('Dark Mode')
 
   if (props.darkMode) {
     document.body.className='darkMode'
@@ -16,24 +15,19 @@ const Home = (props) => {
 
   const changeMode = (checked, e) => {
   props.changeMode()
-  if (!checked) {
-    setModeText('Light Mode')
-  } else {
-    setModeText('Dark Mode')
-  }
   }
 
     return (
       <div>
         <div className='homeContainer'>
-          <div className='homeText'>
+          <div className={props.darkMode ? 'darkModeHomeText' : 'lightModeHomeText'}>
             <h3> Timothy Hansen </h3>
             <h6> Software Engineer </h6>
             <p> JAVASCRIPT | REACT | HTML | CSS | NODE | EXPRESS | MONGODB | MYSQL | POSTGRESQL | AWS  </p>
           </div>
         </div>
         <label className='modeSwitch'>
-          <p className='infoDesc'>{modeText}</p>
+          <p className={props.darkMode ? 'darkModeInfoDesc' : 'lightModeInfoDesc'}>{props.darkMode ? 'Dark Mode' : 'Light Mode'}</p>
           <Switch onChange={changeMode} checked={props.darkMode} />
         </label>
       </div>

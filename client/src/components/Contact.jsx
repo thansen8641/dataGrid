@@ -7,7 +7,7 @@ const Contact = (props) => {
   console.log('contact', props)
   return (
     <div className='container'>
-      <div className='containerText'>
+      <div className={props.darkMode ? 'darkModeContainerText' : 'lightModeContainerText'}>
       <h1>
         WANT TO GET IN TOUCH?
       </h1>
@@ -18,9 +18,9 @@ const Contact = (props) => {
         I look forward to hearing from you!
       </p>
       <div className='logoContainer'>
-      <SocialIcon className='socialLogo' target="_blank" bgColor='#bc9d57' url="https://www.linkedin.com/in/timothy-r-hansen/" />
-      <SocialIcon className='socialLogo' url="mailto:timothyhansen229@gmail.com" target="_blank"  bgColor='#bc9d57'/>
-      <SocialIcon className='socialLogo' bgColor='#bc9d57' url="https://github.com/thansen8641" target="_blank" />
+      <SocialIcon className='socialLogo' target="_blank" bgColor={props.darkMode ? '#bc9d57' : '#b98714'}url="https://www.linkedin.com/in/timothy-r-hansen/" />
+      <SocialIcon className='socialLogo' url="mailto:timothyhansen229@gmail.com" target="_blank" bgColor={props.darkMode ? '#bc9d57' : '#b98714'}/>
+      <SocialIcon className='socialLogo' bgColor={props.darkMode ? '#bc9d57' : '#b98714'} url="https://github.com/thansen8641" target="_blank" />
       </div>
       </div>
     </div>

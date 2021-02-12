@@ -13,14 +13,14 @@ const NavBar = (props) => {
     return (
       <div className={props.darkMode ? 'darkNavBar' : 'lightNavBar'}>
         <div>
-          <img className='logo' src={'https://i.ibb.co/4RzHJbt/icon-flat.png'} alt="Logo" />
+          <img className='logo' src={props.darkMode ? 'https://i.ibb.co/4RzHJbt/icon-flat.png' : 'https://i.ibb.co/kBCvWNt/icon-working.png'} alt="Logo" />
         </div>
         <div className='navigation'>
-            <Link className='navLink' to="/">Home</Link>
-            <Link className='navLink' to="/About">About</Link>
-            <Link className='navLink' to="/Projects">Projects</Link>
-            <a className='navLink' target="_blank" href="https://drive.google.com/file/d/1e1shPBbqPoF1es5hwXwudAZYg54vjZlm/view?usp=sharing">Resume</a>
-            <Link className='navLink' to="/Contact">Contact</Link>
+            <Link className={props.darkMode ?'darkModeNavLink' : 'lightModeNavLink'} to="/">HOME</Link>
+            <Link className={props.darkMode ?'darkModeNavLink' : 'lightModeNavLink'} to="/About">ABOUT</Link>
+            <Link className={props.darkMode ?'darkModeNavLink' : 'lightModeNavLink'} to="/Projects">PROJECTS</Link>
+            <a className={props.darkMode ?'darkModeNavLink' : 'lightModeNavLink'} target="_blank" href="https://drive.google.com/file/d/1e1shPBbqPoF1es5hwXwudAZYg54vjZlm/view?usp=sharing">RESUME</a>
+            <Link className={props.darkMode ?'darkModeNavLink' : 'lightModeNavLink'} to="/Contact">CONTACT</Link>
           </div>
       </div>
     )

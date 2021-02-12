@@ -14,12 +14,12 @@ const NavBar = () => {
         <img className='logo' src={'https://i.ibb.co/4RzHJbt/icon-flat.png'} alt="Logo" />
       </div>
       <div className='navigation'>
-        <Link className='navLink' to="/">Home</Link>
-        <Link className='navLink' to="/About">About</Link>
-        <Link className='navLink' to="/Projects">Projects</Link>
-        <Link className='navLink' to="/Resume">Resume</Link>
-        <Link className='navLink' to="/Contact">Contact</Link>
-      </div>
+          <Link className='navLink' to="/">Home</Link>
+          <Link className='navLink' to="/About">About</Link>
+          <Link className='navLink' to="/Projects">Projects</Link>
+          <Link className='navLink' to="/Resume">Resume</Link>
+          <Link className='navLink' to="/Contact">Contact</Link>
+        </div>
     </div>
   )
 }

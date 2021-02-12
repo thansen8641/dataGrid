@@ -17,7 +17,8 @@ const NavBar = () => {
           <Link className='navLink' to="/">Home</Link>
           <Link className='navLink' to="/About">About</Link>
           <Link className='navLink' to="/Projects">Projects</Link>
-          <Link className='navLink' to="/Resume">Resume</Link>
+          {/* <Link className='navLink' to="/Resume">Resume</Link> */}
+          <a className='navLink' target="_blank" href="https://drive.google.com/file/d/1e1shPBbqPoF1es5hwXwudAZYg54vjZlm/view?usp=sharing">Resume</a>
           <Link className='navLink' to="/Contact">Contact</Link>
         </div>
     </div>

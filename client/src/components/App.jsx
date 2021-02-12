@@ -5,6 +5,7 @@ import About from './About.jsx';
 import Projects from './Projects.jsx';
 import Resume from './Resume.jsx';
 import NavBar from './NavBar.jsx';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
   BrowserRouter as Router,
@@ -23,15 +24,15 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
+
+
         <Route path="/About">
           <About />
         </Route>
         <Route path="/Projects">
           <Projects />
         </Route>
-        <Route path="/Resume">
-          <Resume />
-        </Route>
+        {/* <a className='linkToSite' target="_blank" href="https://docs.google.com/document/d/1DO7iY9WajkLMrIFhEFqkOOu9bovlpzX2cvI01N1gzNU/edit?usp=sharing">RESUME</a> */}
         <Route path="/Contact">
           <Contact />
         </Route>

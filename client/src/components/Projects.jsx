@@ -13,14 +13,13 @@ const Projects = () => {
 
   const opts = {
     playerVars: {
-      height: 800,
       autoplay: 1,
     },
   }
 
   return (
-    <div className='projectsContainer'>
-      <div className='projectsTitle'>
+    <div className='pageContainer'>
+      <div className='pageTitle'>
         <h1> PROJECTS </h1>
       </div>
       <div className='project'>

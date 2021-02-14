@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const app = express();
-const port = process.env.PORT || 3000
+// const port = process.env.PORT || 3000
 const path = require('path');
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
@@ -24,6 +24,6 @@ app.get('/', function (req, res) {
 app.use(bodyParser.json())
 
 
-app.listen(port, () => {
-  console.log(`Portfolio listening at http://localhost:${port}`)
+app.listen(() => {
+  console.log(`Portfolio listening at http://localhost:${process.env.PORT}`)
 })

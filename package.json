@@ -4,14 +4,13 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "12.19.0",
+    "node": ">=6.13.0",
     "npm": "6.14.8"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/index.js",
     "build": "webpack --config webpack.config.js --watch",
-    "postinstall": "webpack -p",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && webpack --config webpack.config.js"
   },
   "repository": {

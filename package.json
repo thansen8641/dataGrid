@@ -19,7 +19,7 @@
     "url": "https://github.com/thansen8641/portfolio/issues"
   },
   "homepage": "https://github.com/thansen8641/portfolio#readme",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.12.13",
     "@babel/core": "^7.12.13",
     "@babel/plugin-transform-runtime": "^7.12.15",

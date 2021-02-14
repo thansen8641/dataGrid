@@ -16,7 +16,7 @@ import {
 
 
 const App = (props) => {
-  console.log('app', props.darkMode)
+  console.log('app', props)
   return (
     <Router>
       <NavBar darkMode={props.darkMode} />
@@ -51,7 +51,6 @@ const mapDispatchToProps = (dispatch) => {
     changeMode: () => { dispatch({type: 'changeMode'})}
   }
 }
-
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

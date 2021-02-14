@@ -64,6 +64,10 @@ h6 {
   padding-bottom: 2%;
 }
 
+.menuIcon {
+  visibility: hidden;
+}
+
 
 .darkModeNavLink {
   justify-self: flex-end;
@@ -397,3 +401,104 @@ h6 {
     padding: 3% 0% 3% 0;
     width: 50%;
   }
+
+
+@media only screen and (max-width: 450px) {
+  .darkNavBar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+     background-color: #141618;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    padding: 5% 0% 0% 15%;
+  }
+
+  .menuIcon {
+    visibility: visible;
+    color: #bc9d57;
+    align-self: center;
+    padding-left: 57%;
+  }
+
+  .navigation {
+    visibility: hidden;
+  }
+/*
+  .darkModeContainerText {
+    font-family: 'Teko', sans-serif;
+    color: #bc9d57;
+    text-align: center;0
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin: 12% 15% 5% 15%;
+    border-bottom: 1px solid #bc9d57;
+    border-top: 1px solid #bc9d57;
+    padding: 10% 0% 3% 0;
+    width: 50%;
+  } */
+
+  .darkModeHomeText {
+    font-family: 'Teko', sans-serif;
+    color: #bc9d57;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin: 140px 15% 5% 15%;
+    border-bottom: 1px solid #bc9d57;
+    border-top: 1px solid #bc9d57;
+    padding: 3% 0% 3% 0;
+    width: 50%;
+  }
+
+  h3 {
+    font-size: 35;
+  }
+
+  h6 {
+    font-size: 20;
+  }
+
+  p {
+    font-weight: bolder;
+    font-size: 15;
+  }
+
+  .lightModeHomeText {
+    font-family: 'Teko', sans-serif;
+  color: #b98714;
+  border-bottom: 1px solid #b98714;
+  border-top: 1px solid #b98714;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin: 140px 15% 5% 15%;
+  padding: 3% 0% 3% 0;
+  width: 50%;
+  font-weight: bolder;
+  }
+
+
+.darkModeInfoDesc {
+  color: #bc9d57;
+  letter-spacing: 0.2rem;
+  font-family: 'Teko', sans-serif;
+  margin-bottom: .5%;
+  text-transform: uppercase;
+  padding-bottom: 6%;
+}
+
+.lightModeInfoDesc {
+  color: #b98714;
+  letter-spacing: 0.2rem;
+  font-family: 'Teko', sans-serif;
+  margin-bottom: .5%;
+  text-transform: uppercase;
+  padding-bottom: 6%;
+}
+
+}

@@ -12,7 +12,7 @@ const Contact = (props) => {
         WANT TO GET IN TOUCH?
       </h1>
       <p>
-        Whether your another programmer looking to chat about ideas on pushing the technological boundaries of an application, or a recruiter looking for their next best employee, I would love to connect. Feel free to reach me below via LinkedIn, Github, or Email.
+        Whether your another programmer looking to chat about ideas on pushing the technological boundaries of an application, or a recruiter looking for their next best employee, I would love to connect. Feel free to reach me below via LinkedIn, Github, or at timothyhansen229@gmail.com.
       </p>
       <p>
         I look forward to hearing from you!

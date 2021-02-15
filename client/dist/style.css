@@ -656,9 +656,9 @@ h6 {
     flex-direction: column;
     padding-left: 5%;
     /* max-height: 20%; */
-    height: 200;
+    /* height: 200; */
     /* padding-right: 3%; */
-    overflow: scroll;
+    /* overflow: scroll; */
     justify-content: space-between;
     margin-top: 15%;
 }

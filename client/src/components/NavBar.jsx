@@ -15,10 +15,12 @@ const NavBar = (props) => {
   return (
     <div className={props.darkMode ? 'darkNavBar' : 'lightNavBar'}>
       <div>
-        <img className='logo' src={props.darkMode ? 'https://i.ibb.co/4RzHJbt/icon-flat.png' : 'https://i.ibb.co/kBCvWNt/icon-working.png'} alt="Logo" />
+        <Link to="/">
+          <img className='logo' src={props.darkMode ? 'https://i.ibb.co/4RzHJbt/icon-flat.png' : 'https://i.ibb.co/kBCvWNt/icon-working.png'} alt="Logo" />
+        </Link>
       </div>
-        <MenuIcon onClick={props.changeDrawer} className='menuIcon' />
-        <Drawer changeDrawer={props.changeDrawer} drawerOpen={props.drawerOpen}/>
+      <MenuIcon onClick={props.changeDrawer} className='menuIcon' />
+      <Drawer changeDrawer={props.changeDrawer} drawerOpen={props.drawerOpen} />
       <div className='navigation'>
         <Link className={props.darkMode ? 'darkModeNavLink' : 'lightModeNavLink'} to="/">HOME</Link>
         <Link className={props.darkMode ? 'darkModeNavLink' : 'lightModeNavLink'} to="/About">ABOUT</Link>
@@ -38,7 +40,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    changeDrawer: () => { dispatch({type: 'changeDrawer'})}
+    changeDrawer: () => { dispatch({ type: 'changeDrawer' }) }
   }
 }
 

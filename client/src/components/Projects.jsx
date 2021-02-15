@@ -77,10 +77,6 @@ const Projects = (props) => {
             <a className={props.darkMode ? 'darkModeLinkToSite' : 'lightModeLinkToSite'} target="_blank" href="https://inkrprate.herokuapp.com/">- Click here to view project website</a>
           </div>
         </div>
-
-        {/* <div className={props.darkMode ? 'darkModeSpacer' : 'lightModeSpacer'}>
-        </div> */}
-
         <div className='project'>
           <div className='mobileInfoContainer2'>
             <h3 className={props.darkMode ? 'darkModeInfoTitle' : 'lightModeInfoTitle'}>

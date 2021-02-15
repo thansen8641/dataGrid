@@ -275,6 +275,15 @@ h6 {
 }
 
 
+/* .drawerItem {
+ padding-right: 50%;
+} */
+
+.drawerText {
+  font-family: 'Teko', sans-serif;
+}
+
+
 
 
 
@@ -500,5 +509,7 @@ h6 {
   text-transform: uppercase;
   padding-bottom: 6%;
 }
+
+
 
 }

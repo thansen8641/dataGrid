@@ -16,9 +16,27 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+
+const useStyles = makeStyles({
+  // backgroundColor: 'red'
+  // list: {
+  //   width: 100,
+  //   height: '100%'
+  // },
+  // drawer: {
+  //   width: 'auto'
+  // },
+  drawer: {
+    width: 'auto'
+  }
+});
 
 
 const Drawer = (props) => {
+  console.log('LOCATION', window.location)
+  const classes = useStyles();
+  const { history } = props;
   console.log('drawer', props)
 
 
@@ -26,13 +44,46 @@ const Drawer = (props) => {
   props.changeDrawer()
   }
 
+  const itemList = [
+    {
+      text: 'HOME',
+      onClick: () => { history.push('/')
+       toggleDrawer()
+     }
+    },
+    {
+      text: 'ABOUT',
+      onClick: () =>  { history.push('/About')
+       toggleDrawer()
+     }
+    },
+    {
+      text: 'PROJECTS',
+      onClick: () => { history.push('/Projects')
+      toggleDrawer()
+     }
+    },
+    {
+      text: 'RESUME',
+      onClick: () => { window.location.href = "https://drive.google.com/file/d/1e1shPBbqPoF1es5hwXwudAZYg54vjZlm/view?usp=sharing"
+      toggleDrawer()
+    }
+    },
+    {
+      text: 'CONTACT',
+      onClick: () => { history.push('/Contact')
+      toggleDrawer()
+    }
+    }
+  ]
+
   return(
     <div>
-    <MUIDrawer open={props.drawerOpen} anchor='right' onClose={toggleDrawer}>
-    <List>
-          {['Home', 'About', 'Projects', 'Resume', 'Contact'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemText primary={text} />
+    <MUIDrawer className={classes.fullList} open={props.drawerOpen} anchor='right' onClose={toggleDrawer}>
+    <List className={classes.list}>
+          {itemList.map((link, index) => (
+            <ListItem button onClick={link.onClick} key={link.text}>
+              <ListItemText primary={link.text} />
             </ListItem>
           ))}
         </List>
@@ -50,4 +101,4 @@ const Drawer = (props) => {
 
 
 
-export default Drawer;
+export default withRouter(Drawer);

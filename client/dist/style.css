@@ -89,7 +89,7 @@ h6 {
 
 .selfie {
   width: 40%;
-  max-height: 1%;
+  /* max-height: 1%; */
 }
 
 .aboutInfo {
@@ -532,7 +532,7 @@ h6 {
 
 .selfie {
   width: 80%;
-  max-height: 1%;
+  /* max-height: 1%; */
   align-self: center;
 }
 

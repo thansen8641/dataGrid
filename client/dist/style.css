@@ -437,19 +437,6 @@ h6 {
   .navigation {
     visibility: hidden;
   }
-/*
-  .darkModeContainerText {
-    font-family: 'Teko', sans-serif;
-    color: #bc9d57;
-    text-align: center;0
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-    margin: 12% 15% 5% 15%;
-    border-bottom: 1px solid #bc9d57;
-    border-top: 1px solid #bc9d57;
-    padding: 10% 0% 3% 0;
-    width: 50%;
-  } */
 
   .darkModeHomeText {
     font-family: 'Teko', sans-serif;
@@ -461,7 +448,7 @@ h6 {
     border-bottom: 1px solid #bc9d57;
     border-top: 1px solid #bc9d57;
     padding: 3% 0% 3% 0;
-    width: 50%;
+    width: 70%;
   }
 
   h3 {
@@ -487,7 +474,7 @@ h6 {
   text-transform: uppercase;
   margin: 140px 15% 5% 15%;
   padding: 3% 0% 3% 0;
-  width: 50%;
+  width: 70%;
   font-weight: bolder;
   }
 
@@ -510,6 +497,159 @@ h6 {
   padding-bottom: 6%;
 }
 
+.darkModeContainerText {
+  font-family: 'Teko', sans-serif;
+  color: #bc9d57;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin: 140px 15% 5% 15%;
+  border-bottom: 1px solid #bc9d57;
+  border-top: 1px solid #bc9d57;
+  padding: 3% 0% 3% 0;
+  width: 70%;
+}
+
+ .lightModeContainerText {
+  font-family: 'Teko', sans-serif;
+  font-weight: bolder;
+  color: #b98714;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin: 140px 15% 5% 15%;
+  border-bottom: 1px solid #b98714;
+  border-top: 1px solid #b98714;
+  padding: 3% 0% 3% 0;
+  width: 70%;
+}
+
+.selfieContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 3% 3% 3% 3%;
+}
+
+.selfie {
+  width: 80%;
+  max-height: 1%;
+  align-self: center;
+}
+
+.darkModePageTitle {
+  font-family: 'Teko', sans-serif;
+    color: #bc9d57;
+    align-self: center;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    border-top: 1px solid #bc9d57;
+    /* border-bottom: 1px solid #bc9d57; */
+    width: 70%;
+    /* font-size: 22; */
+    margin-bottom: 2%;
+    padding-top: 3%;
+}
+
+.aboutInfo {
+  display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    /* max-height: 20%; */
+    height: 200;
+    /* padding-right: 3%; */
+    overflow: scroll;
+    justify-content: space-between;
+    margin-top: 15%;
+}
+
+.projectVideo {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3%;
+  padding-right: 2%;
+  width: 30%;
+}
+
+
+.mobileInfoContainer1 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 12%;
+  padding-right: 3%;
+  width: 47%;
+  height: 200px;
+  overflow: scroll;
+}
+
+.mobileInfoContainer2 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3%;
+  width: 47%;
+  height: 200px;
+  overflow: scroll;
+}
+
+.darkModeSpacer {
+  padding-bottom: 5%;
+  margin-top: 5%;
+  border-top: 1px solid #bc9d57;
+  width: 70%;
+  align-self: center;
+}
+
+.lightModeSpacer {
+  padding-bottom: 5%;
+  margin-top: 5%;
+  border-top: 1px solid #b98714;
+  width: 70%;
+  align-self: center;
+}
+
+.mobileProjectVid1 {
+  display: flex;
+  padding-left: 4%;
+  padding-right: 2%;
+  width: 35%;
+}
+
+.darkModeInfoTitle{
+  color: #bc9d57;
+  letter-spacing: 0.2rem;
+  font-family: 'Teko', sans-serif;
+  margin-top: 0;
+  /* margin-bottom: 1%; */
+}
+
+}
+
+
+@media only screen and (max-width: 376px) {
+
+.mobileInfoContainer1 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    padding-right: 3%;
+    width: 47%;
+    height: 200px;
+    overflow: scroll;
+}
+
+.pageContainer {
+  height: 800px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  top: 19.5%;
+  bottom: 30%;
+}
+
 
 
 }
+
+

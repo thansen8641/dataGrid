@@ -18,17 +18,22 @@ import MailIcon from '@material-ui/icons/Mail';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Teko',
+      'sans-serif',
+    ].join(','),
+  },});
+
 const useStyles = makeStyles({
-  // backgroundColor: 'red'
-  // list: {
-  //   width: 100,
-  //   height: '100%'
-  // },
-  // drawer: {
-  //   width: 'auto'
-  // },
-  drawer: {
-    width: 'auto'
+  darkDrawer: {
+    width: 90,
+    color: '#141618',
+    backgroundColor: '#bc9d57',
+    height: 10000,
   }
 });
 
@@ -65,7 +70,8 @@ const Drawer = (props) => {
     },
     {
       text: 'RESUME',
-      onClick: () => { window.location.href = "https://drive.google.com/file/d/1e1shPBbqPoF1es5hwXwudAZYg54vjZlm/view?usp=sharing"
+      onClick: () => { window.open("https://drive.google.com/file/d/1e1shPBbqPoF1es5hwXwudAZYg54vjZlm/view?usp=sharing", '_blank'
+      )
       toggleDrawer()
     }
     },
@@ -79,15 +85,17 @@ const Drawer = (props) => {
 
   return(
     <div>
-    <MUIDrawer className={classes.fullList} open={props.drawerOpen} anchor='right' onClose={toggleDrawer}>
-    <List className={classes.list}>
+    <ThemeProvider theme={theme}>
+    <MUIDrawer className={classes.drawer} open={props.drawerOpen} anchor='right' onClose={toggleDrawer}>
+    <List className={classes.darkDrawer}>
           {itemList.map((link, index) => (
             <ListItem button onClick={link.onClick} key={link.text}>
-              <ListItemText primary={link.text} />
+              <ListItemText className={classes.drawerText} primary={link.text} />
             </ListItem>
           ))}
         </List>
     </MUIDrawer>
+    </ThemeProvider>
     </div>
   )
 }

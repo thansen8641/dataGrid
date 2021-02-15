@@ -24,13 +24,11 @@ const App = (props) => {
         <Route exact path="/">
           <Home darkMode={props.darkMode} />
         </Route>
-
-
         <Route path="/About">
           <About darkMode={props.darkMode} />
         </Route>
         <Route path="/Projects">
-          <Projects darkMode={props.darkMode}/>
+          <Projects drawerOpen={props.drawerOpen} darkMode={props.darkMode}/>
         </Route>
         <Route path="/Contact">
           <Contact darkMode={props.darkMode} />
@@ -42,7 +40,8 @@ const App = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    darkMode: state.darkMode
+    darkMode: state.darkMode,
+    drawerOpen: state.drawerOpen
   }
 }
 

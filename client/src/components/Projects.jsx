@@ -6,17 +6,26 @@ import YouTube from 'react-youtube';
 
 
 const Projects = (props) => {
-  console.log('projects', props)
+  console.log('projects', props.drawerOpen)
 
   const onReady = (event) => {
     event.target.stopVideo()
   }
 
-  const opts = {
+  const mobileOpts = {
+    width: '170',
+    height: '200',
     playerVars: {
       autoplay: 1,
-    },
+    }
   }
+
+  const regOpts = {
+    playerVars: {
+      autoplay: 1
+    }
+  }
+
 
   return (
     <div className='pageContainer'>
@@ -24,10 +33,10 @@ const Projects = (props) => {
         <h1> HERE ARE A FEW PROJECTS I WORKED ON </h1>
       </div>
       <div className='project'>
-        <div className='projectVideo'>
-          <YouTube videoId='M1QAY-lB0DU' opts={opts} onReady={onReady} />
+        <div className={!props.drawerOpen || props.drawerOpen ? 'mobileProjectVid1' : 'projectVideo'}>
+          <YouTube videoId='M1QAY-lB0DU' opts={!props.drawerOpen || props.drawerOpen ? mobileOpts : regOpts} onReady={onReady} />
         </div>
-        <div className='infoContainer'>
+        <div className={!props.drawerOpen || props.drawerOpen ? 'mobileInfoContainer1' : 'infoContainer'}>
           <h3 className={props.darkMode ? 'darkModeInfoTitle' : 'lightModeInfoTitle'}>
             INKORPORATE
         </h3>
@@ -48,7 +57,7 @@ const Projects = (props) => {
       </div>
 
       <div className='project'>
-        <div className='infoContainer'>
+        <div className={!props.drawerOpen || props.drawerOpen ? 'mobileInfoContainer2' : 'infoContainer'}>
           <h3 className={props.darkMode ? 'darkModeInfoTitle' : 'lightModeInfoTitle'}>
             BOOTLOCKER
         </h3>
@@ -65,16 +74,16 @@ const Projects = (props) => {
 
         </div>
         <div className='projectVideo'>
-          <YouTube videoId='iRv9NdiH3WM' opts={opts} onReady={onReady} />
+          <YouTube videoId='iRv9NdiH3WM' opts={!props.drawerOpen || props.drawerOpen ? mobileOpts : regOpts} onReady={onReady} />
         </div>
       </div>
 
 
       <div className='project'>
-        <div className='projectVideo'>
-          <YouTube videoId='OpI3eUrDwzo' opts={opts} onReady={onReady} />
+        <div className={!props.drawerOpen || props.drawerOpen ? 'mobileProjectVid1' : 'projectVideo'}>
+          <YouTube videoId='OpI3eUrDwzo' opts={!props.drawerOpen || props.drawerOpen ? mobileOpts : regOpts} onReady={onReady} />
         </div>
-        <div className='infoContainer'>
+        <div className={!props.drawerOpen || props.drawerOpen ? 'mobileInfoContainer1' : 'infoContainer'}>
           <h3 className={props.darkMode ? 'darkModeInfoTitle' : 'lightModeInfoTitle'}>
             BULLSEYE
         </h3>

@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 
 const NavBar = (props) => {
 
-  console.log('navbar', props)
+  // console.log('navbar', props)
 
   return (
     <div className={props.darkMode ? 'darkNavBar' : 'lightNavBar'}>

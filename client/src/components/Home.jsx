@@ -4,7 +4,7 @@ import Switch from "react-switch";
 
 
 const Home = (props) => {
-  console.log('home', props)
+  // console.log('home', props)
 
   if (props.darkMode) {
     document.body.className='darkMode'

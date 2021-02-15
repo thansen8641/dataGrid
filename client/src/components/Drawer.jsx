@@ -39,10 +39,10 @@ const useStyles = makeStyles({
 
 
 const Drawer = (props) => {
-  console.log('LOCATION', window.location)
+  // console.log('LOCATION', window.location)
   const classes = useStyles();
   const { history } = props;
-  console.log('drawer', props)
+  // console.log('drawer', props)
 
 
   const toggleDrawer = () => {

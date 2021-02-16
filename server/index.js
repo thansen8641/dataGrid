@@ -11,16 +11,21 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 app.get('/', function (req, res) {
   res.sendFile('index.html', { root: path.join(__dirname, '../client/dist/') });
 });
-// app.get('/About', function (req, res) {
-//   res.sendFile('index.html', { root: path.join(__dirname, '../client/dist/') });
-// });
+app.get('/About', function (req, res) {
+  res.sendFile('index.html', { root: path.join(__dirname, '../client/dist/') });
+});
 
-// app.get('/Projects', function (req, res) {
-//   res.sendFile('index.html', { root: path.join(__dirname, '../client/dist/') });
-// });
-// app.get('/Contact', function (req, res) {
-//   res.sendFile('index.html', { root: path.join(__dirname, '../client/dist/') });
-// });
+app.get('/Projects', function (req, res) {
+  res.sendFile('index.html', { root: path.join(__dirname, '../client/dist/') });
+});
+app.get('/Contact', function (req, res) {
+  res.sendFile('index.html', { root: path.join(__dirname, '../client/dist/') });
+});
+app.get('/Resume', function (req, res) {
+  res.statusCode = 302;
+  res.setHeader("Location", "https://drive.google.com/file/d/1e1shPBbqPoF1es5hwXwudAZYg54vjZlm/view");
+  res.end();
+});
 app.use(bodyParser.json())
 
 

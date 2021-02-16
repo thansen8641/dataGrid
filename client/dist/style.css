@@ -538,6 +538,13 @@ h6 {
   align-self: center;
 }
 
+.projectVideoIpad {
+  display: flex;
+    padding-left: 3%;
+    padding-right: 7%;
+    width: 45%;
+}
+
 
 
 }

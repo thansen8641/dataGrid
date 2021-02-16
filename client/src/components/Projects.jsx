@@ -44,7 +44,7 @@ const Projects = (props) => {
 
   const ipad = {
     width: '380',
-    height: '300',
+    height: '380',
     playerVars: {
       autoplay: 1,
     }
@@ -306,7 +306,7 @@ const Projects = (props) => {
           <a className={props.darkMode ? 'darkModeLinkToSite' : 'lightModeLinkToSite'} target="_blank" href="https://bootlocker.herokuapp.com/">- Click here to view project website</a>
 
         </div>
-        <div className='projectVideo'>
+        <div className={isIpad ? 'projectVideoIpad' : 'projectVideo'}>
           <YouTube videoId='iRv9NdiH3WM' opts={isIpad? ipad : opts} onReady={onReady} />
         </div>
       </div>

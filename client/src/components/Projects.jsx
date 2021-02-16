@@ -19,6 +19,9 @@ const Projects = (props) => {
   const isIphoneX = useMediaQuery({ query: '(max-width: 376px)' });
   console.log('isIPHONEx', isIphoneX)
 
+  const isIpad = useMediaQuery({ query: '(max-width: 770px)' });
+  console.log('isIpad', isIpad)
+
 
   // const isIpad = useMediaQuery({query: '(max-width: 768px)' });
 
@@ -34,6 +37,14 @@ const Projects = (props) => {
   const iphoneX = {
     width: '350',
     height: '200',
+    playerVars: {
+      autoplay: 1,
+    }
+  }
+
+  const ipad = {
+    width: '380',
+    height: '300',
     playerVars: {
       autoplay: 1,
     }
@@ -143,24 +154,6 @@ const Projects = (props) => {
       </div >
     )
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   // media query for iphone
   if (isIphonePlus) {
@@ -274,7 +267,7 @@ const Projects = (props) => {
       </div>
       <div className='project'>
         <div className='projectVideo'>
-          <YouTube videoId='M1QAY-lB0DU' opts={opts} onReady={onReady} />
+          <YouTube videoId='M1QAY-lB0DU' opts={isIpad? ipad : opts} onReady={onReady} />
         </div>
         <div className='infoContainer'>
           <h3 className={props.darkMode ? 'darkModeInfoTitle' : 'lightModeInfoTitle'}>
@@ -297,7 +290,7 @@ const Projects = (props) => {
       </div>
 
       <div className='project'>
-        <div className='infoContainer'>
+        <div className={isIpad ? 'infoContainer2' : 'infoContainer'}>
           <h3 className={props.darkMode ? 'darkModeInfoTitle' : 'lightModeInfoTitle'}>
             BOOTLOCKER
           </h3>
@@ -314,14 +307,14 @@ const Projects = (props) => {
 
         </div>
         <div className='projectVideo'>
-          <YouTube videoId='iRv9NdiH3WM' opts={opts} onReady={onReady} />
+          <YouTube videoId='iRv9NdiH3WM' opts={isIpad? ipad : opts} onReady={onReady} />
         </div>
       </div>
 
 
       <div className='project'>
         <div className='projectVideo'>
-          <YouTube videoId='OpI3eUrDwzo' opts={opts} onReady={onReady} />
+          <YouTube videoId='OpI3eUrDwzo' opts={isIpad? ipad : opts} onReady={onReady} />
         </div>
         <div className='infoContainer'>
           <h3 className={props.darkMode ? 'darkModeInfoTitle' : 'lightModeInfoTitle'}>

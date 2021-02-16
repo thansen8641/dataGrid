@@ -417,32 +417,32 @@ h6 {
     width: 50%;
   }
 
-/*
-@media only screen and (max-width: 1024px) {
 
-  .pageContainer {
-    height: 800px;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    position: absolute;
-    top: 22.5%;
-    bottom: 30%;
+@media only screen and (max-width: 770px) {
+  .darkModeHomeText {
+    font-family: 'Teko', sans-serif;
+    color: #bc9d57;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin: 25% 15% 5% 15%;
+    border-bottom: 1px solid #bc9d57;
+    border-top: 1px solid #bc9d57;
+    padding: 3% 0% 3% 0;
+    width: 75%;
 }
 
-.darkModeHomeText {
+.lightModeHomeText {
   font-family: 'Teko', sans-serif;
-  color: #bc9d57;
+  color: #b98714;
   text-align: center;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   margin: 25% 15% 5% 15%;
-  border-bottom: 1px solid #bc9d57;
-  border-top: 1px solid #bc9d57;
+  border-bottom: 1px solid #b98714;
+  border-top: 1px solid #b98714;
   padding: 3% 0% 3% 0;
-  width: 70%;
+  width: 75%;
 }
 
 .darkModeContainerText {
@@ -455,7 +455,45 @@ h6 {
   border-bottom: 1px solid #bc9d57;
   border-top: 1px solid #bc9d57;
   padding: 3% 0% 3% 0;
-  width: 70%;
+  width: 75%;
+}
+
+.lightModeContainerText {
+  font-family: 'Teko', sans-serif;
+  color: #b98714;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin: 25% 15% 5% 15%;
+  border-bottom: 1px solid #b98714;
+  border-top: 1px solid #b98714;
+  padding: 3% 0% 3% 0;
+  width: 75%;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6%;
+  width: 47%;
+}
+
+.infoContainer2 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3%;
+  width: 47%;
+}
+
+.pageContainer {
+  height: 800px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  top: 23%;
+  bottom: 30%;
 }
 
 .darkModePageTitle {
@@ -465,40 +503,44 @@ h6 {
   text-align: center;
   letter-spacing: 0.2rem;
   border-top: 1px solid #bc9d57;
-  width: 70%;
-  margin-bottom: 8%;
+  /* border-bottom: 1px solid #bc9d57; */
+  width: 75%;
+  /* font-size: 22; */
+  margin-bottom: 5%;
   padding-top: 3%;
 }
 
-.mobileInfoContainer1 {
-  display: flex;
-    flex-direction: column;
-    padding-left: 3%;
-    padding-right: 3%;
-    width: 47%;
-    height: 300px;
-    overflow: scroll;
-}
-
-.mobileInfoContainer2 {
-  display: flex;
-    flex-direction: column;
-    padding-left: 3%;
-    padding-right: 3%;
-    width: 47%;
-    height: 300px;
-    overflow: scroll;
+.lightModePageTitle {
+  font-family: 'Teko', sans-serif;
+  color: #b98714;
+  align-self: center;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  border-top: 1px solid #b98714;
+  /* border-bottom: 1px solid #bc9d57; */
+  width: 75%;
+  /* font-size: 22; */
+  margin-bottom: 5%;
+  padding-top: 3%;
 }
 
 .darkModeBottomLine {
   padding-bottom: 5%;
   border-top: 1px solid #bc9d57;
-  width: 50%;
+  width: 75%;
   align-self: center;
-  margin-top: 5%;
 }
- */
 
+.lightModeBottomLine {
+  padding-bottom: 5%;
+  border-top: 1px solid #b98714;
+  width: 75%;
+  align-self: center;
+}
+
+
+
+}
 
 
 

@@ -770,6 +770,14 @@ h6 {
 
 @media only screen and (max-width: 376px) {
 
+  .mobileInfoContainer4 {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 5%;
+    padding-top: 6%;
+}
+
   .mobileInfoContainer2 {
     display: flex;
     flex-direction: column;
@@ -800,6 +808,15 @@ h6 {
   padding-bottom: 5%;
   border-top: 1px solid #bc9d57;
   width: 20%;
+  align-self: center;
+}
+
+.mobileInfoContainer1 {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding-left: 5%;
+  padding-top: 7%;
   align-self: center;
 }
 

@@ -413,7 +413,7 @@ h6 {
     width: 50%;
   }
 
-
+/*
 @media only screen and (max-width: 1024px) {
 
   .pageContainer {
@@ -493,7 +493,7 @@ h6 {
   align-self: center;
   margin-top: 5%;
 }
-
+ */
 
 
 
@@ -539,7 +539,7 @@ h6 {
   }
 
   h3 {
-    font-size: 35;
+    font-size: 30;
   }
 
   h6 {
@@ -572,7 +572,6 @@ h6 {
   font-family: 'Teko', sans-serif;
   margin-bottom: .5%;
   text-transform: uppercase;
-  padding-bottom: 6%;
 }
 
 .lightModeInfoDesc {
@@ -581,7 +580,18 @@ h6 {
   font-family: 'Teko', sans-serif;
   margin-bottom: .5%;
   text-transform: uppercase;
-  padding-bottom: 6%;
+}
+
+.pageContainer {
+  height: 800px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+  top: 22%;
+  bottom: 30%;
 }
 
 .darkModeContainerText {
@@ -670,25 +680,51 @@ h6 {
   padding-right: 2%;
   width: 30%;
 }
-
+.headMobileInfoContainer {
+  display: flex;
+  padding-right: 2%;
+}
 
 .mobileInfoContainer1 {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   padding-left: 12%;
   padding-right: 3%;
   width: 47%;
   height: 200px;
-  overflow: scroll;
+  overflow: scroll; */
+  display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 5%;
+    padding-top: 5%;
+    align-self: center;
 }
 
 .mobileInfoContainer2 {
   display: flex;
-  flex-direction: column;
-  padding-left: 3%;
-  width: 47%;
-  height: 200px;
-  overflow: scroll;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 5%;
+    padding-top: 9%;
+    align-self: center;
+}
+
+.mobileInfoContainer3 {
+  display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 5%;
+    /* padding-top: 9%; */
+    align-self: center;
+}
+
+.mobileInfoContainer4 {
+  display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding-left: 5%;
+    padding-top: 5%;
 }
 
 .darkModeBottomLine {
@@ -708,7 +744,6 @@ h6 {
 }
 
 .mobileProjectVid1 {
-  display: flex;
   padding-left: 4%;
   padding-right: 2%;
   width: 35%;
@@ -719,23 +754,30 @@ h6 {
   letter-spacing: 0.2rem;
   font-family: 'Teko', sans-serif;
   margin-top: 0;
+  align-self: center;
   /* margin-bottom: 1%; */
 }
+
+ .project {
+   display: flex;
+   flex-direction: column;
+   margin: 4% 0% 7% 0;
+ }
+
 
 }
 
 
 @media only screen and (max-width: 376px) {
 
-.mobileInfoContainer1 {
+  .mobileInfoContainer2 {
     display: flex;
     flex-direction: column;
-    padding-left: 15%;
-    padding-right: 3%;
-    width: 47%;
-    height: 200px;
-    overflow: scroll;
-}
+    width: 70%;
+    padding-left: 5%;
+    padding-top: 5%;
+    align-self: center;
+  }
 
 .pageContainer {
   height: 800px;
@@ -751,7 +793,7 @@ h6 {
 
 .project {
   display: flex;
-  margin: 4% 0% 8% 0;
+  margin: 4% 0% 7% 0;
 }
 
 .darkModeSpacer {
@@ -763,4 +805,4 @@ h6 {
 
 
 }
-}
+

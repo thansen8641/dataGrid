@@ -32,7 +32,9 @@ const ZA = 2;
 // A single cell in a data grid
 const Cell = ({
   datum,
+  pinnedTitles
 }) => {
+  // console.log('cell', pinnedTitles)
   return (
     <td>
       {
@@ -56,7 +58,7 @@ const HeaderCell = ({
   pinnedTitles
 }) => {
   return (
-    <th style={pinnedTitles && pinnedTitles.includes(title) ? {backgroundColor: 'yellow'} : {backgroundColor: 'transparent'}} onClick={onClick}>
+    <th style={pinnedTitles && pinnedTitles.includes(title) ? { backgroundColor: 'yellow' } : { backgroundColor: 'transparent' }} onClick={onClick}>
       {capitalize(title)}
     </th>
   );
@@ -116,20 +118,20 @@ const DataGrid = () => {
       // keep track of order of columns
       setPinnedTitles([col, ...pinnedTitles])
     }
-      if (sortType === 'random' && !event.metaKey) {
-        let sortedData = [...data].sort((a, b) => a.state.localeCompare(b.state));
-        setData(sortedData);
-        setSortType('ascending');
-      }
-      if (sortType === 'ascending' && !event.metaKey) {
-        let sortedData = [...data].sort((a, b) => a.state.localeCompare(b.state)).reverse()
-        setData(sortedData);
-        setSortType('descending');
-      }
-      if (sortType === 'descending' && !event.metaKey) {
-        setData(originalData);
-        setSortType('random');
-      }
+    if (sortType === 'random' && !event.metaKey) {
+      let sortedData = [...data].sort((a, b) => a.state.localeCompare(b.state));
+      setData(sortedData);
+      setSortType('ascending');
+    }
+    if (sortType === 'ascending' && !event.metaKey) {
+      let sortedData = [...data].sort((a, b) => a.state.localeCompare(b.state)).reverse()
+      setData(sortedData);
+      setSortType('descending');
+    }
+    if (sortType === 'descending' && !event.metaKey) {
+      setData(originalData);
+      setSortType('random');
+    }
   };
 
 
@@ -139,50 +141,48 @@ const DataGrid = () => {
     // get rid of duplicates in columns from back
     columns = [...new Set(columns)]
     for (var z = 0; z < columns.length; z++) {
-      for (var a = 0; a < pinnedTitles.length; a++) {
-        // pinned column is first in line
-        if (columns[z] === pinnedTitles[0]) {
-          // keep track of item
-          var match = columns[z]
-          // delete old item
-          columns.splice(z, 1)
-          // reinsert into the front
-          columns = [match, ...columns]
-       }
+      // pinned column is first in line
+      if (columns[z] === pinnedTitles[0]) {
+        // keep track of item
+        var match = columns[z]
+        // delete old item
+        columns.splice(z, 1)
+        // reinsert into the front
+        columns = [match, ...columns]
       }
     }
 
     return (
       <table>
-      <thead>
-        <tr>
-          {
-            columns.map((col, i) => (
-              <HeaderCell index={i}
-              pinnedTitles={pinnedTitles}
-                key={i}
-                title={col}
-                onClick={onClick}
-              />
+        <thead>
+          <tr>
+            {
+              columns.map((col, i) => (
+                <HeaderCell index={i}
+                  pinnedTitles={pinnedTitles}
+                  key={i}
+                  title={col}
+                  onClick={onClick}
+                />
 
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {
+            data.map((row, i) => (
+              <tr key={i}>
+                {
+                  columns.map((col, j) => <Cell pinnedTitles={col} onClick={onClick} key={j} datum={row[col]} />)
+                }
+              </tr>
             ))
           }
-        </tr>
-      </thead>
-      <tbody>
-        {
-          data.map((row, i) => (
-            <tr key={i}>
-              {
-                columns.map((col, j) => <Cell onClick={onClick} key={j} datum={row[col]} />)
-              }
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
+        </tbody>
+      </table>
     )
-   }
+  }
 
 
   return (

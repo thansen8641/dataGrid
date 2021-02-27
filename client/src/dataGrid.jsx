@@ -52,10 +52,11 @@ const Cell = ({
 const HeaderCell = ({
   title,
   onClick,
-  index
+  index,
+  pinnedTitles
 }) => {
   return (
-    <th style={index === 0 ? {backgroundColor: 'yellow'} : {backgroundColor: 'transparent'}} onClick={onClick}>
+    <th style={pinnedTitles && pinnedTitles.includes(title) ? {backgroundColor: 'yellow'} : {backgroundColor: 'transparent'}} onClick={onClick}>
       {capitalize(title)}
     </th>
   );
@@ -158,6 +159,7 @@ const DataGrid = () => {
           {
             columns.map((col, i) => (
               <HeaderCell index={i}
+              pinnedTitles={pinnedTitles}
                 key={i}
                 title={col}
                 onClick={onClick}

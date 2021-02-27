@@ -7,8 +7,9 @@ First and foremost, thank you for giving me the opportunity to earn a spot on yo
 
 This prompt was undoubtedly a challenge, but I had an extremely fun experience troubleshooting and getting all parts to run smoothly without any bugs.
 
-Please feel free to reach out to me if you have any issues getting the application started. I look forward to hearing back from your team.
+Please feel free to reach out to me if you have any issues getting the application started. I attached a link to a youtube video of my application working just in case you don't feel like going through the startup portion. I look forward to hearing back from your team.
 
+https://youtu.be/v5LhMzQlToM
 
 ––
 Timothy Hansen
